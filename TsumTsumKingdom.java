@@ -303,7 +303,7 @@ public class TsumTsumKingdom {
 		
 		boolean workerDone = false;
 		
-		//buying workers
+		//hiring workers
 		while(!workerDone && workersLeft != 0 && maxCash()>=50 && !fullHire(1)) {
 			System.out.println("Who would like to hire a worker? (Type \"NOBODY\" if nobody wants to hire a worker)");
 			String person = in.nextLine();
@@ -449,9 +449,9 @@ public class TsumTsumKingdom {
 		
 		boolean internDone = false;
 		
-		//buying interns
+		//hiring interns
 		while(!internDone && internsLeft != 0 && maxCash()>=13 && !fullHire(2)) {
-			System.out.println("Who would like to hire a intern for the whole day? (Type \"NOBODY\" if nobody wants to buy a intern for the whole day)");
+			System.out.println("Who would like to hire an intern for the whole day? (Type \"NOBODY\" if nobody wants to hire an intern for the whole day)");
 			String person = in.nextLine();
 			if(person.equals("NOBODY")) {
 				internDone = true;
@@ -519,7 +519,7 @@ public class TsumTsumKingdom {
 						System.out.println(players[personNum]+", please pay "+interns[internNum]+" $13.");
 					}
 				} else {
-					System.out.println("Sorry, you don't have enough money to hire a intern for the whole day.");
+					System.out.println("Sorry, you don't have enough money to hire an intern for the whole day.");
 				}
 				
 			}
@@ -569,7 +569,7 @@ public class TsumTsumKingdom {
 		
 		//hiring interns
 		while(!internDone && internsLeft != 0 && !fullHire(2)) {
-			System.out.println("Who would like to hire a intern for the rest of the day? (Type \"NOBODY\" if nobody wants to hire a intern for the rest of the day)");
+			System.out.println("Who would like to hire an intern for the rest of the day? (Type \"NOBODY\" if nobody wants to hire an intern for the rest of the day)");
 			String person = in.nextLine();
 			if(person.equals("NOBODY")) {
 				internDone = true;
@@ -592,7 +592,7 @@ public class TsumTsumKingdom {
 				}
 				
 				if(playerCash[personNum]>=1) {
-					System.out.println(players[personNum]+", which ride would you like to hire a intern for?");
+					System.out.println(players[personNum]+", which ride would you like to hire an intern for?");
 					String ride = in.nextLine();
 					int rideNum = 0;
 					
@@ -633,7 +633,7 @@ public class TsumTsumKingdom {
 						System.out.println("We couldn't find that name. This input was ignored.");
 					}
 				} else {
-					System.out.println("Sorry, you don't have enough money to hire a intern.");
+					System.out.println("Sorry, you don't have enough money to hire an intern.");
 				}
 			}
 		}
@@ -645,7 +645,7 @@ public class TsumTsumKingdom {
 		//hiring interns
 		int internsBought = 0;
 		while(!internDone && internsLeft-internsBought != 0 && !fullHire(2)) {
-			System.out.println("Who would like to hire a intern for an hour? (Type \"NOBODY\" if nobody wants to hire a intern for an hour)");
+			System.out.println("Who would like to hire an intern for an hour? (Type \"NOBODY\" if nobody wants to hire an intern for an hour)");
 			String person = in.nextLine();
 			if(person.equals("NOBODY")) {
 				internDone = true;
@@ -668,7 +668,7 @@ public class TsumTsumKingdom {
 				}
 				
 				if(playerCash[personNum]>=1) {
-					System.out.println(players[personNum]+", which ride would you like to hire a intern for?");
+					System.out.println(players[personNum]+", which ride would you like to hire an intern for?");
 					String ride = in.nextLine();
 					int rideNum = 0;
 					
@@ -712,7 +712,7 @@ public class TsumTsumKingdom {
 						System.out.println(players[personNum]+", please pay "+interns[internNum]+" $1.");
 					}
 				} else {
-					System.out.println("Sorry, you don't have enough money to buy a intern.");
+					System.out.println("Sorry, you don't have enough money to hire an intern.");
 				}
 				
 			}
@@ -943,7 +943,7 @@ public class TsumTsumKingdom {
 				}
 				
 				if(!doneEverything) {
-					System.out.println("You must pay the rest of your money to the bank, return your property to the bank, and become a intern.");
+					System.out.println("You must pay the rest of your money to the bank, return your property to the bank, and become an intern.");
 					//add to intern database
 					for(int j = 0; j<25; j++) {
 						if(interns[j].equals("")) {
@@ -1030,7 +1030,7 @@ public class TsumTsumKingdom {
 					printed = true;
 				}
 				
-				System.out.println(interns[i]+", do you want to become a manager?");
+				System.out.println(interns[i]+", do you want to become a worker?");
 				String response = in.nextLine();
 				if(response.equalsIgnoreCase("yes")) {
 					
